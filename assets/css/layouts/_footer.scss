@@ -1,0 +1,127 @@
+.footer {
+    .box-container {
+        @include grid(0, 25rem);
+        margin-bottom: 5rem;
+
+        .box {
+            h3 {
+                font-size: 2.2rem;
+                padding-block: 1rem;
+            }
+
+            // Box-1
+            .link {
+                display: block;
+                font-size: 1.5rem;
+                color: #aaa;
+                padding-block: 1rem;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+            // Box-2
+            .openHours {
+                font-size: 1.5rem;
+                color: #aaa;
+                padding-block: 1rem;
+                text-transform: capitalize;
+
+                i { color: $red; }
+            }
+
+            // Box-3
+            .location {
+                font-size: 1.5rem;
+                color: #aaa;
+                padding-block: 1rem;
+
+                i {
+                    color: $red;
+                    padding-right: 1rem;
+                }
+            }
+
+            .share {
+                padding-block: 1rem;
+
+                a {
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    background-color: $light-bg;
+                    text-align: center;
+                    font-size: 1.7rem;
+                    border-radius: 50%;
+                    color: $white;
+                    margin-right: 0.5rem;
+
+                    &:hover {
+                        background-color: $red;
+                    }
+                }
+            }
+
+            // Box-4
+            .subcribe {
+                font-size: 1.5rem;
+                color: #aaa;
+                padding-block: 1rem;
+            }
+
+            form {
+                .email {
+                    width: 100%;
+                    background-color: $light-bg;
+                    padding: 1.6rem 1.2rem;
+                    margin-bottom: 1.5rem;
+                    font-size: 1.5rem;
+                    color: $white;
+                    text-transform: none;
+                }
+            }
+
+        }
+    }
+}
+
+.credit {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2rem;
+    background-color: $light-bg;
+    line-height: 1.5;
+}
+
+
+/* =======================
+    # SCROLLTOP
+========================== */
+.go-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: $red;
+    color: #FFF;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+    visibility: hidden;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .go-top.show-scroll {
+    opacity: 0.8;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    visibility: visible;
+  }

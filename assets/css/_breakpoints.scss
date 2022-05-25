@@ -1,0 +1,198 @@
+@media (max-width: 1200px) {
+    
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 58%;
+    }
+
+    .header {
+        .container {
+            .navbar {
+                .nav-link {
+                    padding: 2.5rem 1rem;
+                }
+            }
+        }
+        
+    }
+
+    .home {
+        .home-title {
+            font-size: $fs-h1-991;
+        }
+    }
+
+    .about {
+        .container {
+            .about-content {
+                .about-title {
+                    font-size: 3.5rem;
+                }
+    
+                .box-container {
+                    margin-block: 2rem;
+                    @include flexbox(2rem, center);
+                    flex-wrap: wrap;
+    
+                    .box {
+                        flex: 1 1 20rem;
+    
+                        .box-title i {
+                            color: $red;
+                            padding-right: 1.5rem;
+                        }
+                        .box-text {
+                            font-size: 1.5rem;
+                            padding-block: 0;
+                        }
+                    }
+                }
+    
+                .btn-primary {
+                    margin-top: 2rem;
+                }
+    
+            }
+    
+            .about-image {
+                flex: 1 1 42rem;
+                position: relative;
+    
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    width: 15rem;
+                    height: 15rem;
+                    background-color: $red;
+                    z-index: -1;
+                }
+    
+                &::before {
+                    top: 0;
+                    left: 0;
+                }
+    
+                &::after {
+                    bottom: 0;
+                    right: 0;
+                }
+    
+                img {
+                    max-width: 100%;
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    .pricing {
+        .h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding-block: 1rem;
+        .container {
+            .logo img {
+                height: 5rem;
+
+            }
+
+            .navbar {
+                position: absolute;
+                top: 99%; left: 0;
+                width: 100%;
+                background-color: $black;
+                padding-block: 2rem;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                &.active {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+                
+                .nav-link {
+                    display: block; 
+                    font-size: 2rem;
+                    padding-block: 1.6rem;
+                    padding-left: 3rem;
+                    
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+            }
+    
+            .navbar-action {
+                @include flexbox(2.5rem, center);
+            }
+
+            #menu-bar {
+                display: inline-block;
+                font-size: 3rem;
+
+                &.fa-times {
+                    font-size: 3rem;
+                    transform: rotate(90deg);
+                    color: $red;
+                }
+            }
+        }
+    }   
+
+    .home {
+        .home-slider {
+            .home-wrapper {
+                .slide {
+                    .home-content {
+                        width: 50rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .features {
+        .box-container {
+            .box-reverse {
+                flex-flow: column;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 550px) { 
+    .h2 {
+        font-size: 3rem;
+    }
+    .header {
+        .container {
+            .btn-join {
+                display: none;
+            }
+        }
+    }
+
+    .home {
+        .home-content {
+            text-align: center;
+
+            .home-title {
+                font-size: 4rem;
+                padding-block: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) { 
+
+}

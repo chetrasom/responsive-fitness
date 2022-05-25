@@ -1,0 +1,37 @@
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 4;
+
+    &.active {
+        background-color: $black;
+        box-shadow: $shadow-sm;
+    }
+
+    .container {
+        @include flexbox(0, space-between);
+
+        .navbar {
+            margin-left: auto;
+            margin-right: 2rem;
+            .nav-link {
+                font-size: 1.7rem;
+                font-weight: 500;
+                color: #FFF;
+                display: inline-block;
+                padding: 2.5rem 2rem;
+
+                &:is(:hover, :focus) {
+                    background-color: $red;
+                }
+            }
+        }
+
+        #menu-bar {
+            display: none;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+    }
+}

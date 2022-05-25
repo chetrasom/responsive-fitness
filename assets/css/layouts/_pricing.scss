@@ -1,0 +1,63 @@
+.pricing {
+    .box-container {
+        @include grid(1.5rem, 32rem);
+
+        .box {
+            .content-1 {
+                .span-title { color: $red; }
+
+                .h2 span { color: $red; }
+
+                .pricing-list {
+                    margin-bottom: 1.5rem;
+
+                    li {
+                        font-size: 1.6rem;
+                        padding-block: 1.5rem;
+
+                        i {
+                            color: $red;
+                            padding-right: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .content-2 {
+                text-align: center;
+                padding: 2rem;
+                background: linear-gradient(130deg, #191F1B 93%, transparent 90%);
+
+                .basic-plan {
+                    font-size: 2.5rem;
+                }
+
+                .pricing-title {
+                    font-size: 2rem;
+                    padding-block: 1.5rem;
+
+                    span {
+                        font-size: 5rem;
+                        font-weight: 700;
+                        color: $red;
+                    }
+                }
+
+                .pricing-list {
+                    margin-bottom: 1.5rem;
+
+                    li {
+                        font-size: 1.6rem;
+                        padding-block: 2rem;
+
+                        i {
+                            color: $red;
+                            padding-right: 2rem;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

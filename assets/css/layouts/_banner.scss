@@ -1,0 +1,17 @@
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6),), 
+                url('../images/banner-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+
+    .banner-content {
+        .span-title { color: $red; }
+        .section-text { 
+            max-width: 60rem;
+            margin-inline: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}

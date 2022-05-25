@@ -1,0 +1,243 @@
+
+// ============> ROOT
+    $red: #ff0336;
+    $black: #0F1511;
+    $white: #fff;
+    $light-white: #aaa;
+    $light-bg: #191F1B;
+
+    $shadow-sm :rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    $shape: linear-gradient(130deg, $light-bg 93%, transparent 90%);
+
+    $transition: 0.2s ease-in-out;
+
+    $ff-nunito: "Nunito", sans-serif;
+
+    $fs-navlink: 1.7rem;
+
+    $fs-h1-991: 4rem;
+    $fs-h1-550: 3rem;
+
+    $fw-500: 500;
+    $fw-700: 700;
+
+    $section-padding: 5rem;
+
+
+// ============> RESET HTML
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+  
+ul { list-style: none; }
+  
+a { text-decoration: none; }
+  
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+  
+html { 
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth; 
+    scroll-padding-top: 5rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $red;
+    }
+}
+
+body {
+    font-family: $ff-nunito;
+    background-color: $black;
+    color: $white;
+}
+
+/*======================= 
+    * MIXINS * 
+=========================*/
+@mixin flexbox($gap, $justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin grid($gap, $size) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+    gap: $gap;
+}
+
+
+/*======================= 
+    * REUSABLE CLASSES * 
+=========================*/
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-inline: 2rem;
+}
+
+.section {
+    padding-block: $section-padding;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(130deg, #ff0336 90%, transparent 91%);
+    color: #FFF;
+}
+
+.btn{
+    &:is(:hover, :focus) {
+        transform: translateX(1rem);
+    }
+}
+
+.span-title {
+    font-size: 2rem;
+}
+
+
+.h1, h2 {
+    font-family: $ff-nunito;
+    color: $white;
+}
+
+.h1 {
+    font-size: 5rem;
+    font-weight: $fw-700;
+    line-height: 1.4;
+    padding-block: 1rem;
+}
+
+.h2 {
+    font-size: 4rem;
+    font-weight: $fw-700;
+    line-height: 1.4;
+    padding-block: 1rem;
+}
+
+.h3 {
+    font-size: 2rem;
+    font-weight: $fw-500;
+    line-height: 1.4;
+    padding-block: 1rem;
+}
+
+.section-text, .box-text {
+    padding-block: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #aaa;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: $red;
+}
+.card-text {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+
+    .heading-title {
+        display: inline-block;
+        font-size: 3rem;
+        background-color: $black;
+        border: 2px solid #FFF;
+        padding: 0.5rem 1.5rem;
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+
+        span { color: $red; }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 0.1rem;
+            width: 100%;
+            background-color: #aaa;
+            border-radius: 1rem;
+            z-index: -1;
+        }
+    }
+}
+
+
+/* Overide Swiper JS */
+.swiper-wrapper {
+    height: auto !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    height: 2rem;
+    width: 2rem;
+    background-color: $white;
+    border-radius: 0;
+
+    &.swiper-pagination-bullet-active {
+        background-color: $red;
+    }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 2rem !important;
+}
+
+
+@import "./layouts/៌៌_header.scss";
+@import "./layouts/home";
+@import "./layouts/about";
+@import "./layouts/features";
+@import "./layouts/pricing";
+@import "./layouts/trainers";
+@import "./layouts/banner";
+@import "./layouts/reviews";
+@import "./layouts/blog";
+@import "./layouts/footer";
+@import "./breakpoints";

@@ -1,0 +1,30 @@
+.home {
+    .home-slider {
+        .home-wrapper {
+            .slide {
+                min-height: 100vh;
+                background-position: center !important;
+                background-size: cover !important;
+                padding-inline: 14%;
+                @include flexbox(0, flex-start);
+
+                .home-content {
+                    width: 60rem;
+                    
+                    .span-title {
+                        display: block;
+                        color: $red;
+                    }
+
+                    .home-title span {
+                        color: $red;
+                    }
+
+                    .btn-home {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

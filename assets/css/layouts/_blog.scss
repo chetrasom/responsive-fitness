@@ -1,0 +1,35 @@
+.blogs {
+    
+    .slide {
+        background-color: $light-bg;
+        margin-bottom: 7rem;
+
+        &:hover .image img{
+            transform: scale(1.1);
+        }
+        
+        .image {
+            height: 25rem;
+            width: 100%;
+            overflow: hidden;
+
+
+        }
+
+        .content {
+            padding: 2rem;  
+            span {
+                font-size: 1.6rem;
+                color: $red;
+            }
+            .center-border {
+                margin-inline: 0.5rem;
+                color: $white;
+            }
+
+            .card-text {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

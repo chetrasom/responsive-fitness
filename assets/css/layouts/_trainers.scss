@@ -1,0 +1,47 @@
+.trainer {
+    .box-container {
+        @include grid(1.5rem, 29rem);
+
+        .box {
+            height: 40rem;
+            overflow: hidden;
+            position: relative;
+
+            .trainer-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #191F1B;
+                padding: 2rem;
+                transform: translateY(6.2rem);
+
+                &:hover {
+                    transform: translateY(0);
+                }
+
+                span {
+                    font-size: 1.5rem;
+                    color: $red;
+                }
+                
+                .share {
+                    border-top: .1rem solid $light-white;
+                    padding-top: 2rem;
+
+                    a {
+                        font-size: 2rem;
+                        color: $white;
+                        margin-right: 1.5rem;
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
